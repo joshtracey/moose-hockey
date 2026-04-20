@@ -34,6 +34,41 @@
       padding-bottom: 80px;
     }
 
+    /* LIVE BAR */
+    .live-bar {
+      display: block;
+      background: #cc0000;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      transition: background 0.15s;
+    }
+    .live-bar:hover, .live-bar:focus {
+      background: #e60000;
+      outline: 3px solid #fff;
+      outline-offset: -3px;
+    }
+    .live-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: #fff;
+      animation: pulse 1.5s infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
     /* HEADER */
     header {
       display: flex;
@@ -308,6 +343,7 @@
     <p>Game Recordings · 2026 Season</p>
   </div>
   <div class="header-links">
+
     <a class="playlist-link" href="https://ahgstats.com/u9-pros-tier-1-nb/" target="_blank" rel="noopener">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 21h2v-2H7v2zm-2 0h2v-2H5v2zm4-4h2v-2H9v2zm-4 0h2v-2H5v2zM3 3v18h2V5h14v16h2V3H3zm8 18h2v-2h-2v2zm0-4h2v-2h-2v2zm4 4h2v-2h-2v2zm0-4h2v-2h-2v2zM7 9h10v2H7V9zm0 4h10v-2H7v2z"/></svg>
       <span>Standings</span>
@@ -322,6 +358,12 @@
     </a>
   </div>
 </header>
+
+<a class="live-bar" href="https://www.youtube.com/@joshtracey" target="_blank" rel="noopener">
+  <span class="live-dot"></span>
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+  Watch Live on YouTube
+</a>
 
 <div class="season-label">Spring Series 2026</div>
 
